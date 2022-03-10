@@ -1,0 +1,15 @@
+D:\Parcial\ParcialElectiva\ParcialElectiva\bin\Debug\net6.0\ParcialElectiva.exe
+D:\Parcial\ParcialElectiva\ParcialElectiva\bin\Debug\net6.0\ParcialElectiva.deps.json
+D:\Parcial\ParcialElectiva\ParcialElectiva\bin\Debug\net6.0\ParcialElectiva.runtimeconfig.json
+D:\Parcial\ParcialElectiva\ParcialElectiva\bin\Debug\net6.0\ParcialElectiva.dll
+D:\Parcial\ParcialElectiva\ParcialElectiva\bin\Debug\net6.0\ref\ParcialElectiva.dll
+D:\Parcial\ParcialElectiva\ParcialElectiva\bin\Debug\net6.0\ParcialElectiva.pdb
+D:\Parcial\ParcialElectiva\ParcialElectiva\obj\Debug\net6.0\ParcialElectiva.csproj.AssemblyReference.cache
+D:\Parcial\ParcialElectiva\ParcialElectiva\obj\Debug\net6.0\ParcialElectiva.GeneratedMSBuildEditorConfig.editorconfig
+D:\Parcial\ParcialElectiva\ParcialElectiva\obj\Debug\net6.0\ParcialElectiva.AssemblyInfoInputs.cache
+D:\Parcial\ParcialElectiva\ParcialElectiva\obj\Debug\net6.0\ParcialElectiva.AssemblyInfo.cs
+D:\Parcial\ParcialElectiva\ParcialElectiva\obj\Debug\net6.0\ParcialElectiva.csproj.CoreCompileInputs.cache
+D:\Parcial\ParcialElectiva\ParcialElectiva\obj\Debug\net6.0\ParcialElectiva.dll
+D:\Parcial\ParcialElectiva\ParcialElectiva\obj\Debug\net6.0\ref\ParcialElectiva.dll
+D:\Parcial\ParcialElectiva\ParcialElectiva\obj\Debug\net6.0\ParcialElectiva.pdb
+D:\Parcial\ParcialElectiva\ParcialElectiva\obj\Debug\net6.0\ParcialElectiva.genruntimeconfig.cache
