@@ -21,19 +21,22 @@ namespace ParcialElectiva
 				switch (respuesta)
                 {
 					case 1:
-						bool dineroIngresado = alcancia.InsertarDinero();
+						alcancia.InsertarDinero();
 						break;
 					case 2:
-						alcancia.ImprimirMoneda();
+						alcancia.ImprimirCantidadPorMoneda();
 						break;
 					case 3:
 						alcancia.ImprimirTotalPorMoneda();
 						break;
 					case 4:
-						alcancia.ImprimirTotalPorMoneda();
+						alcancia.VerCantidadTotalDeMonedas();
+						break;
+					case 5:
+						alcancia.VerTotalDeDinero();
 						break;
 				}
-			} while (respuesta >= 1 && respuesta <= 4);
+			} while (respuesta >= 1 && respuesta <= 5);
 		}
 	}
 }

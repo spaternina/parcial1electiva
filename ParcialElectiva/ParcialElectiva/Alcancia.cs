@@ -9,6 +9,7 @@ namespace ParcialElectiva
     internal class Alcancia
     {
         Dictionary<int, int> monedas = new Dictionary<int, int>();
+        List<int> monedasValidas = new List<int>() { 50, 100, 200, 500, 1000 };
         public Alcancia()
         {
             monedas.Add(50, 0);
@@ -17,44 +18,21 @@ namespace ParcialElectiva
             monedas.Add(500, 0);
             monedas.Add(1000, 0);
         }
-        
-
+        public int solicitarMonedaValida()
+        {
+            Console.WriteLine("\nIngrese un valor de moneda: ");
+            int moneda = Convert.ToInt32(Console.ReadLine());
+            int coincidencias = monedasValidas.Where(x => x == moneda).Count();
+            if (coincidencias <= 0) return 0;
+            return moneda;
+        }
         public bool InsertarDinero()
         {
-            int opcion;
-            Console.WriteLine("\nIngrese la moneda a insertar" +
-                "\n1) 50" +
-                "\n2) 100" +
-                "\n3) 200" +
-                "\n4) 500" +
-                "\n5) 1000");
-            opcion = Convert.ToInt32(Console.ReadLine());
-
-            int monedaElegida;
-            switch(opcion)
-            {
-                case 1:
-                    monedaElegida = 50;
-                    break;
-                case 2:
-                    monedaElegida = 100;
-                    break;
-                case 3:
-                    monedaElegida = 200;
-                    break;
-                case 4:
-                    monedaElegida = 500;
-                    break;
-                case 5:
-                    monedaElegida = 1000;
-                    break;
-                default:
-                    monedaElegida = 0;
-                    break;
-            }
+            int monedaElegida = solicitarMonedaValida();
 
             if (monedaElegida == 0)
             {
+                Console.WriteLine("El valor de moneda ingresado no es valido");
                 return false;
             }
 
@@ -65,47 +43,47 @@ namespace ParcialElectiva
             return true;
         }
 
-        public void ImprimirMoneda()
+        public void ImprimirCantidadPorMoneda()
         {
-            int opcion;
-            Console.WriteLine("\nIngrese la moneda a consultar" +
-                "\n1) 50" +
-                "\n2) 100" +
-                "\n3) 200" +
-                "\n4) 500" +
-                "\n5) 1000");
-            opcion = Convert.ToInt32(Console.ReadLine());
-
-            int monedaElegida;
-            switch (opcion)
-            {
-                case 1:
-                    monedaElegida = 50;
-                    break;
-                case 2:
-                    monedaElegida = 100;
-                    break;
-                case 3:
-                    monedaElegida = 200;
-                    break;
-                case 4:
-                    monedaElegida = 500;
-                    break;
-                case 5:
-                    monedaElegida = 1000;
-                    break;
-                default:
-                    monedaElegida = 0;
-                    break;
-            }
+            int monedaElegida = solicitarMonedaValida();
 
             Console.WriteLine("\nDinero ingresado con éxito.");
-            Console.WriteLine("Hay " + this.monedas[monedaElegida] + " monedas de este tipo");
+            Console.WriteLine("Hay " + this.monedas[monedaElegida] + " monedas de " + monedaElegida);
         }
 
         public void ImprimirTotalPorMoneda()
         {
+            int monedaElegida = solicitarMonedaValida();
 
+            if (monedaElegida == 0)
+            {
+                Console.WriteLine("Moneda no valida");
+                return;
+            }
+
+            Console.WriteLine("Esta moneda suma un total de $" + monedaElegida * monedas[monedaElegida]);
+        }
+
+        public void VerCantidadTotalDeMonedas()
+        {
+            int contador = 0;
+            foreach (int moneda in monedasValidas)
+            {
+                contador += monedas[moneda];
+            }
+
+            Console.WriteLine("\nLa cantiad total es de " + contador + " monedas.");
+        }
+
+        public void VerTotalDeDinero()
+        {
+            int dineroTotal = 0;
+            foreach (int moneda in monedasValidas)
+            {
+                dineroTotal += moneda * monedas[moneda];
+            }
+
+            Console.WriteLine("\nLa cantidad total de dinero es de $" + dineroTotal);
         }
     }
 }
